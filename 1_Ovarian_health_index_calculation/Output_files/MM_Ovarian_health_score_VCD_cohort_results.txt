@@ -1,0 +1,11 @@
+Mouse_ID Treatment combined AMH_score FSH_score INHBA_score follicleCounts Ovarian_Health_Index Ovarian_Health_Index_100
+MM016 CTL 14 3 1 4 4 3 75
+MM017 CTL 15 4 1 4 4 3.25 81.25
+MM018 CTL 16 4 2 3 4 3.25 81.25
+MM019 CTL 7 3 2 3 3 2.75 68.75
+MM020 CTL 13 4 1 4 3 3 75
+MM021 VCD 1 1 4 1 1 1.75 43.75
+MM022 VCD 0 1 4 2 1 2 50
+MM023 VCD 2 1 4 1 2 2 50
+MM024 VCD 1 2 3 1 1 1.75 43.75
+MM025 VCD 0 2 3 2 1 2 50

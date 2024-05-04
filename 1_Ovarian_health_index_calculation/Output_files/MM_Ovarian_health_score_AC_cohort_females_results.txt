@@ -1,0 +1,11 @@
+Mouse_ID Age combined AMH_score FSH_score INHBA_score follicleCounts Ovarian_Health_Index Ovarian_Health_Index_100
+131 YF 19 3 1 4 4 3 75
+132 YF 10 4 3 2 3 3 75
+133 YF 14 4 1 4 4 3.25 81.25
+134 YF 6 3 3 2 2 2.5 62.5
+135 YF 10 4 1 4 3 3 75
+136 EF 0 1 2 1 1 1.25 31.25
+137 EF 0 1 4 1 1 1.75 43.75
+138 EF 0 1 4 3 1 2.25 56.25
+139 EF 0 2 4 1 1 2 50
+140 EF 0 2 2 3 1 2 50
