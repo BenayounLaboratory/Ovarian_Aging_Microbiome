@@ -1,0 +1,21 @@
+R version 4.1.2 (2021-11-01)
+Platform: x86_64-apple-darwin17.0 (64-bit)
+Running under: macOS Mojave 10.14.6
+
+Matrix products: default
+BLAS:   /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
+LAPACK: /Library/Frameworks/R.framework/Versions/4.1/Resources/lib/libRlapack.dylib
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] survival_3.3-1  forcats_0.5.1   bitops_1.0-7    pheatmap_1.0.12 beeswarm_0.4.0  dplyr_1.0.8     ggplot2_3.4.2  
+
+loaded via a namespace (and not attached):
+ [1] pillar_1.7.0       compiler_4.1.2     RColorBrewer_1.1-2 tools_4.1.2        lifecycle_1.0.3    tibble_3.1.6       gtable_0.3.0       lattice_0.20-45    pkgconfig_2.0.3    rlang_1.1.0        Matrix_1.5-1       DBI_1.1.2          cli_3.6.0         
+[14] rstudioapi_0.13    xfun_0.30          withr_2.5.0        generics_0.1.2     vctrs_0.5.2        grid_4.1.2         tidyselect_1.1.2   glue_1.6.2         R6_2.5.1           fansi_1.0.2        purrr_0.3.4        magrittr_2.0.2     scales_1.2.1      
+[27] ellipsis_0.3.2     splines_4.1.2      assertthat_0.2.1   colorspace_2.0-3   utf8_1.2.2         tinytex_0.37       munsell_0.5.0      crayon_1.5.0      
