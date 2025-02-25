@@ -1,0 +1,11 @@
+Mouse_ID	Age	Antral	CL	Primary	Primordial	Secondary
+131	YF	2	1	1	1	1
+132	YF	1	2	1	2	1
+133	YF	3	1	1	1	1
+134	YF	2	1	0	0	3
+135	YF	1	2	2	1	1
+136	EF	0	0	0	0	0
+137	EF	0	0	0	0	0
+138	EF	0	0	0	0	0
+139	EF	0	0	0	0	0
+140	EF	0	0	0	0	0

@@ -1,0 +1,12 @@
+sample-id	age_cat	age_num	sex	batch
+#q2:types	categorical	numeric	categorical	categorical
+Cohort2_AC_F_4m_1	4m	4	F	AC_16
+Cohort2_AC_F_4m_2	4m	4	F	AC_16
+Cohort2_AC_F_4m_3	4m	4	F	AC_16
+Cohort2_AC_F_4m_4	4m	4	F	AC_16
+Cohort2_AC_F_4m_5	4m	4	F	AC_16
+Cohort2_AC_F_20m_1	20m	20	F	AC_16
+Cohort2_AC_F_20m_2	20m	20	F	AC_16
+Cohort2_AC_F_20m_3	20m	20	F	AC_16
+Cohort2_AC_F_20m_4	20m	20	F	AC_16
+Cohort2_AC_F_20m_5	20m	20	F	AC_16

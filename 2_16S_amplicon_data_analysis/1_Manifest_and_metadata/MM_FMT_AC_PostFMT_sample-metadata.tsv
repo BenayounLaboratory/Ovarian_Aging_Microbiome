@@ -1,0 +1,16 @@
+sample-id	sex	age	mouse_id	fmt	timeline	collection	timepoint	batch	fmt_cont
+#q2:types	categorical	categorical	categorical	categorical	numeric	categorical	categorical	categorical	numeric
+Cohort5_FMT_AC_S29	F	4	MM051	FMT_Y	3	3	Post-FMT	3	1
+Cohort5_FMT_AC_S30	F	4	MM052	FMT_Y	3	3	Post-FMT	3	1
+Cohort5_FMT_AC_S31	F	4	MM058	FMT_O	3	3	Post-FMT	3	2
+Cohort5_FMT_AC_S32	F	4	MM059	FMT_O	3	3	Post-FMT	3	2
+Cohort5_FMT_AC_S33	F	4	MM060	FMT_O	3	3	Post-FMT	3	2
+Cohort5_FMT_AC_S34	F	4	MM061	FMT_Y	3	3	Post-FMT	3	1
+Cohort5_FMT_AC_S35	F	4	MM062	FMT_Y	3	3	Post-FMT	3	1
+Cohort5_FMT_AC_S36	F	4	MM064	FMT_Y	3	3	Post-FMT	3	1
+Cohort5_FMT_AC_S37	F	4	MM065	FMT_Y	3	3	Post-FMT	3	1
+Cohort5_FMT_AC_S38	F	4	MM066	FMT_Y	3	3	Post-FMT	3	1
+Cohort5_FMT_AC_S39	F	4	MM068	FMT_O	3	3	Post-FMT	3	2
+Cohort5_FMT_AC_S40	F	4	MM070	FMT_O	3	3	Post-FMT	3	2
+Cohort5_FMT_AC_S41	F	4	MM085	FMT_O	3	3	Post-FMT	3	2
+Cohort5_FMT_AC_S42	F	4	MM086	FMT_O	3	3	Post-FMT	3	2
