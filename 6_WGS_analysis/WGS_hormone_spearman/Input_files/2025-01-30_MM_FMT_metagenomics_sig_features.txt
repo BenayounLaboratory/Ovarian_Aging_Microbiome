@@ -1,0 +1,21 @@
+x
+1	Massilistercora timonensis
+2	Ruthenibacterium lactatiformans
+3	Monoglobus pectinilyticus
+4	Anaerotignum propionicum
+5	Caproicibacter fermentans
+6	Christensenella minuta
+7	Cloacibacillus porcorum
+8	Ethanoligenens harbinense
+9	uncultured Caproiciproducens sp.
+10	Megasphaera stantonii
+11	Stenotrophomonas acidaminiphila
+12	Bacteroides sp. HF-162
+13	Porphyromonas sp. oral taxon 275
+14	Shigella flexneri
+15	Streptomyces sp. NBC_01324
+16	Paramuribaculum intestinale
+17	Pontibacter kalidii
+18	Alistipes ihumii
+19	Alistipes communis
+20	Parabacteroides merdae
