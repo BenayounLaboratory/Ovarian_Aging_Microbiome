@@ -96,4 +96,4 @@ dev.off()
 ###########################################################
 sink(file = paste(Sys.Date(),"MM_FMT_cohort_functional_abundance_differential_abundance_analysis.txt", sep =""))
 sessionInfo()
-sink()
+sink() 

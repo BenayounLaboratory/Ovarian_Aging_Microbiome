@@ -184,17 +184,15 @@ print(effects)
 effects$average_effect <- rowMeans(effects[,1:4])
 
 # Add average effect size information to neg and pos tables above
-# Convert row names to a column for both data frames
 results_df.AC.females$Pathway <- rownames(results_df.AC.females)
 effects$Pathway <- rownames(effects)
 
 merged_df <- merge(results_df.AC.females, effects[,c("Pathway", "average_effect")], by = "Pathway", all.x = TRUE)
 
-# Perform a left join to map descriptions based on the Pathway column.
 merged_df <- merged_df %>% 
   left_join(map.file, by = c("Pathway" = "V1"))
 
-# Optionally, rename the V2 column to "description".
+# Rename the V2 column to "description".
 colnames(merged_df)[colnames(merged_df) == "V2"] <- "description"
 
 aldex2_filtered <- subset(merged_df, average_effect >= 0.5)
@@ -207,7 +205,7 @@ aldex2_filtered_sorted <- aldex2_filtered[order(-aldex2_filtered$BH_Corrected_P_
 pdf(paste0(Sys.Date(), "_MM_AC_females_picrust2_barplot_down_in_EF.pdf"), width = 15, height = 5)
 ggplot(aldex2_filtered_sorted, aes(x = reorder(description, adjP), y = adjP)) +
   geom_bar(stat = "identity", fill = "steelblue") +
-  coord_flip() + # Flip coordinates for horizontal bars
+  coord_flip() + 
   labs(x = "description", y = "-log10(adjP)", title = "Pathway vs. Adjusted P-value") +
   theme_minimal()
 dev.off()
@@ -222,9 +220,66 @@ aldex2_filtered_sorted <- aldex2_filtered[order(-aldex2_filtered$adjP), ]
 pdf(paste0(Sys.Date(), "_MM_AC_females_picrust2_barplot_up_in_EF.pdf"), width = 15, height = 5)
 ggplot(aldex2_filtered_sorted, aes(x = reorder(description, adjP), y = adjP)) +
   geom_bar(stat = "identity", fill = "steelblue") +
-  coord_flip() + # Flip coordinates for horizontal bars
+  coord_flip() + 
   labs(x = "description", y = "-log10(adjP)", title = "Pathway vs. Adjusted P-value") +
   theme_minimal()
+dev.off()
+
+###################################
+# 4. Assess GUS activity - estrobolome
+###################################
+
+# Access beta-glucuronidase data
+
+AC16.bg <- AC.females.16.pathway.pred["EC:3.2.1.31",]
+AC17.bg <- AC.females.17.pathway.pred["EC:3.2.1.31",]
+AC22.bg <- AC.females.22.pathway.pred["EC:3.2.1.31",]
+AC24.bg <- AC.females.24.pathway.pred["EC:3.2.1.31",]
+
+normalize_by_4m_median <- function(bg_vector, cohort_name) {
+
+  is_4m <- grepl("_4m_", names(bg_vector))
+  is_20m <- grepl("_20m_", names(bg_vector))
+  
+  median_4m <- median(as.numeric(bg_vector[is_4m]), na.rm = TRUE)
+  
+  norm_values <- as.numeric(bg_vector) / median_4m
+  
+  data.frame(
+    Sample = names(bg_vector),
+    Normalized = norm_values,
+    Age = ifelse(is_4m, "4m", "20m"),
+    Cohort = cohort_name,
+    stringsAsFactors = FALSE
+  )
+}
+
+# Apply function to each cohort
+df_16 <- normalize_by_4m_median(AC16.bg, "AC16")
+df_17 <- normalize_by_4m_median(AC17.bg, "AC17")
+df_22 <- normalize_by_4m_median(AC22.bg, "AC22")
+df_24 <- normalize_by_4m_median(AC24.bg, "AC24")
+
+# Combine into one data frame
+combined_df <- rbind(df_16, df_17, df_22, df_24)
+combined_df$Age <- factor(combined_df$Age, levels = c("4m", "20m"))
+combined_df$Cohort <- factor(combined_df$Cohort, levels = c("AC16", "AC17", "AC22", "AC24"))
+
+pch_map <- c("AC16" = 16, "AC17" = 17, "AC22" = 15, "AC24" = 18)
+point_shapes <- pch_map[as.character(combined_df$Cohort)]
+
+wilcox.test(combined_df$Normalized[combined_df$Age == "4m"], combined_df$Normalized[combined_df$Age == "20m"])
+
+pdf(paste(Sys.Date(), "MM_AC_cohort_GUS_activity_quantification.pdf", sep = "_"), width = 6, height = 7)
+boxplot(Normalized ~ Age, data = combined_df, outline = FALSE,
+        main = "GUS activity",
+        col = c("deeppink", "deeppink4"),
+        xlab = "Age",
+        ylab = "GUS activity",
+        ylim = c(0.5, 2))
+beeswarm(Normalized ~ Age, data = combined_df, pch = 16, add = TRUE)
+text(1.5, 2, 
+     paste("p-value ~0.3759"))
 dev.off()
 
 ###########################################################

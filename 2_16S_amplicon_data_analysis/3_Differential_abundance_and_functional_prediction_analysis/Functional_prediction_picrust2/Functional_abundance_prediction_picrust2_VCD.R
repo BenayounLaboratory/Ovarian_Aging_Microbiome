@@ -37,7 +37,7 @@ set.seed(12345)
 
 conds <- c(rep("CTL", 5), rep("VCD", 5))
 conds.int <- c(rep(0,5), rep(1,5))
-
+ 
 # Run Aldex2
 
 aldex2 = aldex(VCD.pathway.pred, conds, mc.samples = 500, test = "t", 
