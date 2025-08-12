@@ -8,7 +8,8 @@ README -- Ovarian RNAseq analysis
                             5_Ovarian_mRNAseq_FMT_cohort_GO.R                     : R script for GO analysis and plot generation
                             6_Ovarian_mRNAseq_FMT_cohort_Deconvolution.R          : R script for deconvolution using ovarian scRNAseq dataset (Broad Institute Single Cell Portal: SCP1914) and plot generation
                             7_Ovarian_mRNAseq_FMT_cohort_TF_candidate_GSEA.R      : R script for GSEA analysis of candidate transcription factors
-                           
+                            8_Ovarian_mRNAseq_cytokine_expression_analysis.R      : R script for cytokine RNA expression analysis and heat map generation
+
                             TF_peaks_files                                        : Transcription factor peak processing files for GSEA analysis
 
         - Public_datasets : 
