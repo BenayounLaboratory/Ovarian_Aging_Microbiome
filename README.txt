@@ -16,3 +16,4 @@ The code is arranged by experiment/analysis:
     # 6_WGS_analysis                         : see README_WGS_analysis.txt
     # 7_Serum_metabolomics                   : see README_serum_metabolomics_analysis.txt
     # 8_MK_quantification                    : see README_MK_quantification.txt 
+    # 9_IL6_IHC_quantification               : see README_IL6_IHC_analysis.txt   
