@@ -410,7 +410,7 @@ dev.off()
 
 write.table(aldex_combined, paste0(Sys.Date(), "_MM_FMT_metagenomics_ALDEx2_differential_abundance_analysis_results.txt"), sep = "\t", quote = FALSE, row.names = FALSE)
 write.table(unique_features, paste0(Sys.Date(), "_MM_FMT_metagenomics_sig_features.txt"), quote = FALSE, sep = "\t")
-
+ 
 ################################################################################
 sink(file = paste(Sys.Date(), "_MM_FMT_metagenomics_analysis_Session_Info.txt"))
 sessionInfo()
